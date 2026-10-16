@@ -77,7 +77,13 @@
   font-size: 12.5px;
 }
 
+/* A long title is cut to one line: the whole text is in the link's tooltip and on the case's page. */
 .case-cell a {
+  display: block;
+  max-width: 340px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: var(--ink);
   font-weight: 500;
 }
@@ -185,5 +191,9 @@ th.num .sort,
 @media (max-width: 640px) {
   .case-cell {
     min-width: 150px;
+  }
+
+  .case-cell a {
+    max-width: 220px;
   }
 }

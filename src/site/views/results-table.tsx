@@ -109,7 +109,9 @@ export function CaseName(props: {
 }) {
   return (
     <th scope="row" class="case-cell">
-      <a href={links.case(props.id, props.query)}>{props.title}</a>
+      <a href={links.case(props.id, props.query)} title={props.title}>
+        {props.title}
+      </a>
       {props.title === props.id ? null : <span class="sub mono">{props.id}</span>}
     </th>
   );
